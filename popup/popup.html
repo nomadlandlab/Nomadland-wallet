@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>popup</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/Frame_11.css" />
+    <link href="../main.css" rel="stylesheet" />
+    <link href="./popup.css" rel="stylesheet" />
+  </head>
+  <body style="min-height: 600px; min-width: 380px">
+    <div  id="chain_div"
+      style="
+        visibility: hidden;
+        position: fixed;
+        background-color: white;
+        right: 0%;
+        top: 55px;
+        z-index: 100;
+        width: 150px;
+        font-family: Arial;
+      "
+    >
+      <ul
+        style="
+          padding-left: 0px;
+          font-size: medium;
+          padding-bottom: 2px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        "
+      >
+        <li id="CKB_btn" class="my_setting">
+          <img
+            class="image"
+            src="../images/nevers-logo.png"
+            style="width: 32px; height: 32px; margin-top: 3px"
+          />
+          <div>Nervos</div>
+        </li>
+        <li id="BTC_btn" class="my_setting">
+          <img
+            class="image"
+            src="../images/bitcoin-logo.png"
+            style="width: 32px; height: 32px; margin-top: 3px"
+          />
+          <div>Bitcoin</div>
+        </li>
+        <li id="ETH_btn" class="my_setting">
+          <img
+            class="image"
+            src="../images/eth.png"
+            style="width: 32px; height: 32px; margin-top: 3px"
+          />
+          <div>Ethereum</div>
+        </li>
+      </ul>
+    </div>
+    <div id="setting_div"
+      style="
+        visibility: hidden;
+        position: fixed;
+        background-color: white;
+        right: 0%;
+        top: 55px;
+        z-index: 100;
+        width: 150px;
+        font-family: Arial;
+      "
+    >
+      <ul
+        style="
+          padding-left: 0px;
+          font-size: medium;
+          padding-bottom: 2px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        "
+      >
+        <li id="Xtwitter_btn" class="my_setting"><div>X(twitter)</div></li>
+        <li id="Discord_btn" class="my_setting"><div>Telegram</div></li>
+        <li id="export_btn" class="my_setting"><div>Export PrivateKey</div></li>
+        <li id="Lockwallet_btn" class="my_setting"><div>Lock wallet</div></li>
+        <li id="AddToken_btn" style="display: none;" class="my_setting">
+          <div>Add Token</div>
+        </li>
+      </ul>
+    </div>
+    <div id="senddobs_div"
+    style="
+      visibility: hidden;
+      position: fixed;
+      background-color: white;
+      right: 5%;
+      top: 275px;
+      z-index: 100;
+      width: 340px;
+      font-family: Arial;
+      background-color: aliceblue;
+    "
+  >
+    
+    <div style="display: flex;justify-items: center;align-items: center;">
+      <div style="display: block;">
+        <input id="Send_to_Address" type="text" placeholder="Send to Address" style="width: 200px;height: 30px;border-radius: 5px">
+      </div>
+      <div>
+        <input id="closeinputsend" class="dobs_btn" type="button" value="Close" style="width: 70px;height: 30px;border-radius: 5px;border: #ffffff;">
+        <input id="send_dobs_btn" class="dobs_btn" type="button" value="Send" style="width: 70px;height: 30px;border-radius: 5px;border: #ffffff;">
+      </div>
+    </div>
+  </div>
+    <div id="WaitingMain"
+      style="min-height: 600px; width: 381px; display: flex"
+    >
+      <div
+        id="loadicon"
+        class="loader loader--style2"
+        title="1"
+        style="min-height: 50px; width: 381px"
+      >
+        <svg
+          version="1.1"
+          id="loader-1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="40px"
+          height="40px"
+          viewBox="0 0 50 50"
+          style="enable-background: new 0 0 50 50"
+          xml:space="preserve"
+        >
+          <path
+            fill="#000"
+            d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z"
+          >
+            <animateTransform
+              attributeType="xml"
+              attributeName="transform"
+              type="rotate"
+              from="0 25 25"
+              to="360 25 25"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+          </path>
+        </svg>
+      </div>
+    </div>
+
+    <div id="UnlockPage" style="display: none">
+      <div class="bc" style="width: 381px; height: 30px; margin: 0 auto"></div>
+      <div class="bc" style="width: 381px; height: 240px; margin: 0 auto">
+        <div class="box">
+          <img src="../logo-vertical.svg" />
+        </div>
+      </div>
+      <div class="bc" style="width: 381px; height: 70px; margin: 0 auto">
+        <div class="box">
+          <h2 style="color: white">Welcome Back</h2>
+        </div>
+      </div>
+      <div class="bc" style="width: 381px; height: 100px; margin: 0 auto">
+        <p
+          class="bc"
+          style="
+            color: white;
+            font-size: 16px;
+            line-height: 18px;
+            margin-left: 14px;
+            margin-top: 0px;
+          "
+        >
+          Enter your password
+        </p>
+        <div class="box">
+          <input
+            id="pass1"
+            type="password"
+            style="
+              width: 350px;
+              height: 38px;
+              font-size: 18px;
+              border-radius: 10px;
+              border: none;
+            "
+          />
+          <span
+            id="showpass_btn"
+            style="
+              position: absolute;
+              cursor: pointer;
+              margin-left: 340px;
+              margin-top: -28px;
+            "
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 cursor-pointer"
+            >
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path
+                  d="M3.056 9A11.97 11.97 0 0012 13c3.47 0 6.596-1.473 8.787-3.827M19 11l2 2.5M14.25 13l.482 3.165M9.165 13L8 15.982M5.455 11l-2.076 2.438"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          <p
+            class="bc"
+            id="errorinfo"
+            style="
+              color: red;
+              margin-left: 4%;
+              margin-top: 2%;
+              font-size: small;
+              text-align: left;
+            "
+          ></p>
+        </div>
+      </div>
+      <div class="bc" style="width: 380px; height: 30px; margin: 0 auto"></div>
+      <div class="bc" style="width: 381px; height: 130px; margin: 0 auto">
+        <div class="box">
+          <button id="Unlock_btn" class="MainObtain">Unock</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="MainPage" style="display: none">
+      <div class="mint-flex-col page">
+        <div style="display: flex">
+          <div
+            id="myweb"
+            class="mint-flex-row mint-justify-start"
+            style="width: 50%; height: auto; cursor: pointer"
+          >
+            <img
+              class="image"
+              src="../images/nl-long.svg"
+              style="width: 100%; border-radius: 0%; padding-top: 5px;height: 100%;"
+            />
+          </div>
+          <div
+            class="mint-flex-row mint-justify-end"
+            style="width: 50%; height: auto"
+          >
+            <img
+              id="blastweb"
+              class="image"
+              src="../images/nevers-logo.png"
+              style="width: 20%; height: 100%; cursor: pointer"
+            />
+            <img
+              id="setting_btn"
+              class="mint-ml-10 image"
+              src="../images/mo.png"
+              style="width: 20%; height: 100%; cursor: pointer"
+            />
+          </div>
+        </div>
+        <div class="mint-mt-20 mint-flex-col">
+          <div class="mint-flex-col mint-justify-start mint-relative section">
+            <div class="section_2"></div>
+            <span
+              id="myaddress"
+              class="font text pos"
+              style="font-weight: normal; font-size: 14px; cursor: default"
+              >0x664703...21d324e2</span
+            >
+            <div id="copyaddr_btn">
+              <img
+                id="ico_copy"
+                style="cursor: pointer"
+                class="image_2 pos_2"
+                src="../images/copy.png"
+              />
+            </div>
+
+            <img
+              style="cursor: pointer; rotate: 180deg"
+              id="widthdraw_btn"
+              class="image_2 pos_3"
+              src="../images/withdraw.png"
+            />
+            <div
+              style="cursor: pointer"
+              id="Pools_btn"
+              class="mint-flex-col mint-justify-start mint-items-center button text-wrapper"
+            >
+              <span class="font_2 text_2">Go to DEX</span>
+            </div>
+          </div>
+          <div class="mint-mt-20 mint-flex-col">
+            <div class="mint-flex-row group">
+              <div
+                style="cursor: pointer"
+                id="Assets_btn"
+                class="mint-flex-col mint-justify-start mint-items-start mint-self-center mint-relative group_2"
+              >
+                <div id="ass_png">
+                  <img class="image_3" src="../images/slecte-1.png" />
+                  <div class="section_3 pos_5"></div>
+                </div>
+                <span id="ass_font" class="font text_3 pos_4">Assets</span>
+              </div>
+              <div
+                style="cursor: pointer"
+                id="Activities_btn"
+                class="mint-flex-col mint-justify-start mint-items-start mint-self-center mint-relative group_2"
+              >
+                <div id="act_png" style="visibility: hidden">
+                  <img class="image_3" src="../images/slecte-1.png" />
+                  <div class="section_3 pos_5"></div>
+                </div>
+                <span id="act_font" class="font_2 text_4 pos_4"
+                  >Activities</span
+                >
+              </div>
+            </div>
+            <div
+              id="tab_Activities"
+              class="mint-flex-col section_4"
+              style="display: none; min-height: 351px"
+            >
+              <div class="mint-flex-col list">
+                <ul id="Tx_ul" style="padding-inline-start: 0%"></ul>
+              </div>
+            </div>
+            <div
+              id="tab_Assets"
+              class="mint-flex-col section_4"
+              style="min-height: 351px"
+            >
+              <div class="mint-flex-row section_5">
+                <div
+                  style="cursor: pointer"
+                  id="Tokens_btn"
+                  class="mint-flex-col mint-justify-start mint-items-center button_2 text-wrapper_2"
+                >
+                  <span id="Tokens_font" class="font_3 text_5">Coins</span>
+                </div>
+                <div
+                  style="cursor: pointer"
+                  id="PFPs_btn"
+                  class="mint-flex-col mint-justify-start mint-items-center button_2 text-wrapper_3 ml-1"
+                >
+                  <span id="PFPs_font" class="font_3 text_6">Dobs</span>
+                </div>
+              </div>
+              <div id="tab_Tokens" class="mint-flex-col list">
+                <ul id="MintPools_ul" style="padding-inline-start: 0%">
+                  <!-- <li
+                    id="eth_li"
+                    style="cursor: pointer; list-style-type: none"
+                  >
+                    <div
+                      class="mint-flex-row mint-justify-between mint-items-center mint-relative list-item mt-11"
+                    >
+                      <div class="mint-flex-row mint-items-center">
+                        <img
+                          class="mint-shrink-0 image_4"
+                          src="../images/nevers-logo.png"
+                        />
+                        <span class="font_3 ml-7">CKB</span>
+                      </div>
+                      <div class="mint-flex-row">
+                        <span id="value_eth" class="font_4">0</span>
+                        <img
+                          class="mint-ml-2 mint-shrink-0 image_5"
+                          src="../images/token-contract.png"
+                        />
+                      </div>
+                    </div>
+                  </li> -->
+                </ul>
+              </div>
+
+              <div
+                id="tab_PFPs"
+                style="display: none"
+                class="mint-flex-col list"
+              >
+                <div id="Tx_pfps" class="grid-container">
+
+                  <!-- <div class="grid-item">
+                    <image class="dobsimg" src="https://orange-due-gibbon-285.mypinata.cloud/ipfs/QmdFU94Zrnxke6XHTK2LB3jL4Kcspb2UoYY9jEmwP31aha">
+                    <div class="dobs_op" >
+                      <span class="dobs_name" >Namexxxxxxx</span>
+                      <div id="dobs_btn0" class="dobs_btn" >
+                        Send
+                      </div>
+                    </div>
+                  </div> -->
+                 
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="WidthDraw" style="display: none">
+      <div class="container">
+        <ul
+          id="tokenTranfer_ul"
+          style="
+            visibility: hidden;
+            background-color: #ffffff;
+            z-index: 10000000;
+            width: 150px;
+            height: 200px;
+            overflow: auto;
+            position: absolute;
+            margin-top: 310px;
+            margin-left: 220px;
+            border: 1px solid rgb(209, 217, 221);
+            border-radius: 10px;
+          "
+        >
+          <!-- <li id="token_eth" style="cursor: pointer" class="listcoin">
+            <img src="../images/nevers-logo.png" style="width: 30px" /><span
+              >&nbsp;&nbsp;</span
+            ><span>CKB</span>
+          </li> -->
+          <br />
+          <div id="TransferList"></div>
+        </ul>
+        <div class="row" style="background-color: white">
+          <div class="elem" style="border: 1px #566370; flex: 0.5">
+            <div
+              class="elem-txt"
+              id="back_main"
+              style="background-color: white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="24"
+                cursor="pointer"
+                class="iconify iconify--eva"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                style="color: gray"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1.19 1.19 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1.19 1.19 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23a1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="elem"></div>
+          <div class="elem"></div>
+          <div class="elem"></div>
+        </div>
+        <div class="row1">
+          <div
+            class="elem1"
+            style="text-align: center; font-size: x-large; font-weight: bold"
+          >
+            Transfer
+          </div>
+        </div>
+        <div class="row1">
+          <div class="elem1" style="text-align: center">
+            Choose assets to transfer, please make sure you have entered the
+            correct wallet address.
+          </div>
+        </div>
+        <div
+          class="row-transfer-input"
+          style="border: 1px solid rgb(209, 217, 221); border-radius: 10px"
+        >
+          <div
+            style="
+              font-weight: bold;
+              font-size: medium;
+              border-radius: 10px;
+              border-width: 1px;
+              border-color: #525244;
+            "
+          >
+            <input
+              id="toAddr_input"
+              placeholder="Enter Address"
+              class="elem1"
+              style="
+                border: none;
+                outline: none;
+                margin-left: 10px;
+                font-size: medium;
+                width: 350px;
+              "
+            />
+          </div>
+        </div>
+        <div
+          class="row-transfer-input"
+          style="border: 1px solid rgb(209, 217, 221); border-radius: 10px"
+        >
+          <input
+            id="input_amount"
+            placeholder="0.00"
+            class="elem1"
+            style="
+              border-radius: 10px;
+              flex: 1;
+              border: none;
+              outline: none;
+              margin-left: 10px;
+              font-size: medium;
+              width: 250px;
+            "
+          />
+          <div
+            id="open_select"
+            class="elem1"
+            style="
+              margin-right: 1px;
+              border: none;
+              cursor: pointer;
+              flex: 0.3;
+              justify-content: center;
+              align-items: center;
+              display: inline-flex;
+            "
+          >
+            <img id="select_token_img" src="" style="width: 30px" />
+            <input
+              id="select_token"
+              value="eth"
+              style="width: 0px; height: 0px; visibility: collapse"
+            />
+            <span id="select_token_symbal" style="margin-left: 2px; width: 50px"
+              >Select Token</span
+            >
+            <svg
+              class=""
+              style="width: 40px; margin-top: 20px"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                class="iconify iconify--mingcute"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                  ></path>
+                </g>
+              </svg>
+            </svg>
+          </div>
+        </div>
+        <div class="row-transfer-input" style="margin-left: 10px">
+          Your balance: <span id="Your_balance"></span><span>&nbsp;</span>
+          <span id="Max_balance_btn" style="color: dodgerblue; cursor: pointer"
+            >MAX</span
+          >
+        </div>
+        <div
+          class="row-transfer-input"
+          style="margin-left: 10px; color: red; font-size: small"
+        >
+          <span id="Your_balance_errorinfo"></span>
+        </div>
+        <div class="row-transfer-input"></div>
+        <div class="row-transfer-input"></div>
+        <div class="row-transfer-input"></div>
+        <div class="row-transfer-input"></div>
+        <div class="row-transfer-input"></div>
+        <div class="row-transfer-input" style="z-index: 1; margin-left: 20px">
+          <div id="Transfer_btn" class="elem">
+            <div class="elem-txt" style="width: 90%; height: 90%">
+              <span>Transfer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>

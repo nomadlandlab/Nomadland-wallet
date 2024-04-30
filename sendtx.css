@@ -1,0 +1,109 @@
+
+html {
+    height:100%;
+}
+body {
+    margin:0;
+    background-position:center;
+    background-size:100%;
+}
+
+.box{
+    width:100%;height:100%;
+    display:table;
+    text-align:center;
+    margin-top: auto;
+    align-items: center;
+}
+
+.box span{
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.bc{
+    background-color: #fafafa;
+}
+.bc div{
+    width: 380px;
+}
+
+.MainObtain:hover {
+    background-color: #5668a3; 
+}
+.MainObtain{
+    background-color: #939393;
+    color: #bfbdbd;width: 160px;height:40px;font-size: 18px;border-radius: 10px;border: none;
+    margin:35px 10px;
+
+}
+
+#btn_Reject:hover{
+    color: white;background-color:rgb(62,140,234);
+}
+#btn_Reject{
+    color: rgb(51,116,195);background-color: white;border: 1px solid rgb(51,116,195)
+}
+#btn_Confirm:hover{
+    color: white;background-color: rgb(62,140,234);
+}
+#btn_Confirm{
+    color: white;background-color: rgb(51,116,195);border: 1px solid rgb(51,116,195)
+}
+
+.loader {
+    visibility: hidden;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+svg path,
+svg rect {
+    fill: #FF6700;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-header {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.tab-header button {
+    background-color: inherit;
+    color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: 0.3s;
+}
+.tab-header button.active {
+    border-bottom: 2px solid #4caf50;
+}
+.tab-content {
+    display: none;
+    padding: 15px 0px;
+}
+.tab-content.active {
+    display: block;
+}
+.tab-content li {
+    list-style-type: none;
+    padding-left: 0%;
+    text-align: left;
+}
+.tab-content ul {
+    padding-inline-start: 0px;
+}
+.tab-header button {
+    width: 50%;
+    font-size: large;
+}
+
+
+
+

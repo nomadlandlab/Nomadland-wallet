@@ -1,0 +1,535 @@
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+}
+
+body * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.mint-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.mint-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.mint-justify-start {
+  justify-content: flex-start;
+}
+
+.mint-justify-end {
+  justify-content: flex-end;
+}
+
+.mint-justify-center {
+  justify-content: center;
+}
+
+.mint-justify-between {
+  justify-content: space-between;
+}
+
+.mint-justify-around {
+  justify-content: space-around;
+}
+
+.mint-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.mint-items-start {
+  align-items: flex-start;
+}
+
+.mint-items-end {
+  align-items: flex-end;
+}
+
+.mint-items-center {
+  align-items: center;
+}
+
+.mint-items-baseline {
+  align-items: baseline;
+}
+
+.mint-items-stretch {
+  align-items: stretch;
+}
+
+.mint-self-start {
+  align-self: flex-start;
+}
+
+.mint-self-end {
+  align-self: flex-end;
+}
+
+.mint-self-center {
+  align-self: center;
+}
+
+.mint-self-baseline {
+  align-self: baseline;
+}
+
+.mint-self-stretch {
+  align-self: stretch;
+}
+
+.mint-flex-1 {
+  flex: 1 1 0%;
+}
+
+.mint-flex-auto {
+  flex: 1 1 auto;
+}
+
+.mint-grow {
+  flex-grow: 1;
+}
+
+.mint-grow-0 {
+  flex-grow: 0;
+}
+
+.mint-shrink {
+  flex-shrink: 1;
+}
+
+.mint-shrink-0 {
+  flex-shrink: 0;
+}
+
+.mint-relative {
+  position: relative;
+}
+
+.mint-ml-2 {
+  margin-left: 2px;
+}
+
+.mint-mt-2 {
+  margin-top: 2px;
+}
+
+.mint-ml-4 {
+  margin-left: 4px;
+}
+
+.mint-mt-4 {
+  margin-top: 4px;
+}
+
+.mint-ml-6 {
+  margin-left: 6px;
+}
+
+.mint-mt-6 {
+  margin-top: 6px;
+}
+
+.mint-ml-8 {
+  margin-left: 8px;
+}
+
+.mint-mt-8 {
+  margin-top: 8px;
+}
+
+.mint-ml-10 {
+  margin-left: 10px;
+}
+
+.mint-mt-10 {
+  margin-top: 10px;
+}
+
+.mint-ml-12 {
+  margin-left: 12px;
+}
+
+.mint-mt-12 {
+  margin-top: 12px;
+}
+
+.mint-ml-14 {
+  margin-left: 14px;
+}
+
+.mint-mt-14 {
+  margin-top: 14px;
+}
+
+.mint-ml-16 {
+  margin-left: 16px;
+}
+
+.mint-mt-16 {
+  margin-top: 16px;
+}
+
+.mint-ml-18 {
+  margin-left: 18px;
+}
+
+.mint-mt-18 {
+  margin-top: 18px;
+}
+
+.mint-ml-20 {
+  margin-left: 20px;
+}
+
+.mint-mt-20 {
+  margin-top: 20px;
+}
+
+.mint-ml-22 {
+  margin-left: 22px;
+}
+
+.mint-mt-22 {
+  margin-top: 22px;
+}
+
+.mint-ml-24 {
+  margin-left: 24px;
+}
+
+.mint-mt-24 {
+  margin-top: 24px;
+}
+
+.mint-ml-26 {
+  margin-left: 26px;
+}
+
+.mint-mt-26 {
+  margin-top: 26px;
+}
+
+.mint-ml-28 {
+  margin-left: 28px;
+}
+
+.mint-mt-28 {
+  margin-top: 28px;
+}
+
+.mint-ml-30 {
+  margin-left: 30px;
+}
+
+.mint-mt-30 {
+  margin-top: 30px;
+}
+
+.mint-ml-32 {
+  margin-left: 32px;
+}
+
+.mint-mt-32 {
+  margin-top: 32px;
+}
+
+.mint-ml-34 {
+  margin-left: 34px;
+}
+
+.mint-mt-34 {
+  margin-top: 34px;
+}
+
+.mint-ml-36 {
+  margin-left: 36px;
+}
+
+.mint-mt-36 {
+  margin-top: 36px;
+}
+
+.mint-ml-38 {
+  margin-left: 38px;
+}
+
+.mint-mt-38 {
+  margin-top: 38px;
+}
+
+.mint-ml-40 {
+  margin-left: 40px;
+}
+
+.mint-mt-40 {
+  margin-top: 40px;
+}
+
+.mint-ml-42 {
+  margin-left: 42px;
+}
+
+.mint-mt-42 {
+  margin-top: 42px;
+}
+
+.mint-ml-44 {
+  margin-left: 44px;
+}
+
+.mint-mt-44 {
+  margin-top: 44px;
+}
+
+.mint-ml-46 {
+  margin-left: 46px;
+}
+
+.mint-mt-46 {
+  margin-top: 46px;
+}
+
+.mint-ml-48 {
+  margin-left: 48px;
+}
+
+.mint-mt-48 {
+  margin-top: 48px;
+}
+
+.mint-ml-50 {
+  margin-left: 50px;
+}
+
+.mint-mt-50 {
+  margin-top: 50px;
+}
+
+.mint-ml-52 {
+  margin-left: 52px;
+}
+
+.mint-mt-52 {
+  margin-top: 52px;
+}
+
+.mint-ml-54 {
+  margin-left: 54px;
+}
+
+.mint-mt-54 {
+  margin-top: 54px;
+}
+
+.mint-ml-56 {
+  margin-left: 56px;
+}
+
+.mint-mt-56 {
+  margin-top: 56px;
+}
+
+.mint-ml-58 {
+  margin-left: 58px;
+}
+
+.mint-mt-58 {
+  margin-top: 58px;
+}
+
+.mint-ml-60 {
+  margin-left: 60px;
+}
+
+.mint-mt-60 {
+  margin-top: 60px;
+}
+
+.mint-ml-62 {
+  margin-left: 62px;
+}
+
+.mint-mt-62 {
+  margin-top: 62px;
+}
+
+.mint-ml-64 {
+  margin-left: 64px;
+}
+
+.mint-mt-64 {
+  margin-top: 64px;
+}
+
+.mint-ml-66 {
+  margin-left: 66px;
+}
+
+.mint-mt-66 {
+  margin-top: 66px;
+}
+
+.mint-ml-68 {
+  margin-left: 68px;
+}
+
+.mint-mt-68 {
+  margin-top: 68px;
+}
+
+.mint-ml-70 {
+  margin-left: 70px;
+}
+
+.mint-mt-70 {
+  margin-top: 70px;
+}
+
+.mint-ml-72 {
+  margin-left: 72px;
+}
+
+.mint-mt-72 {
+  margin-top: 72px;
+}
+
+.mint-ml-74 {
+  margin-left: 74px;
+}
+
+.mint-mt-74 {
+  margin-top: 74px;
+}
+
+.mint-ml-76 {
+  margin-left: 76px;
+}
+
+.mint-mt-76 {
+  margin-top: 76px;
+}
+
+.mint-ml-78 {
+  margin-left: 78px;
+}
+
+.mint-mt-78 {
+  margin-top: 78px;
+}
+
+.mint-ml-80 {
+  margin-left: 80px;
+}
+
+.mint-mt-80 {
+  margin-top: 80px;
+}
+
+.mint-ml-82 {
+  margin-left: 82px;
+}
+
+.mint-mt-82 {
+  margin-top: 82px;
+}
+
+.mint-ml-84 {
+  margin-left: 84px;
+}
+
+.mint-mt-84 {
+  margin-top: 84px;
+}
+
+.mint-ml-86 {
+  margin-left: 86px;
+}
+
+.mint-mt-86 {
+  margin-top: 86px;
+}
+
+.mint-ml-88 {
+  margin-left: 88px;
+}
+
+.mint-mt-88 {
+  margin-top: 88px;
+}
+
+.mint-ml-90 {
+  margin-left: 90px;
+}
+
+.mint-mt-90 {
+  margin-top: 90px;
+}
+
+.mint-ml-92 {
+  margin-left: 92px;
+}
+
+.mint-mt-92 {
+  margin-top: 92px;
+}
+
+.mint-ml-94 {
+  margin-left: 94px;
+}
+
+.mint-mt-94 {
+  margin-top: 94px;
+}
+
+.mint-ml-96 {
+  margin-left: 96px;
+}
+
+.mint-mt-96 {
+  margin-top: 96px;
+}
+
+.mint-ml-98 {
+  margin-left: 98px;
+}
+
+.mint-mt-98 {
+  margin-top: 98px;
+}
+
+.mint-ml-100 {
+  margin-left: 100px;
+}
+
+.mint-mt-100 {
+  margin-top: 100px;
+}
+
+.oldsister{
+  display: flex; 
+  background-color: white;
+  border-radius: 15px;
+  padding: 35px 15px;
+  margin-top: 10px;
+  background-position: 0% 0%;
+  background-size: 390px 131.5px;
+  background-repeat: no-repeat;
+}
+.Y_font{
+  color: #9c9c9c;
+}

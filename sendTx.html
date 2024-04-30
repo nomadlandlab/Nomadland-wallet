@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SendTx Notification</title>
+  <link href="sendtx.css" rel="stylesheet">
+</head>
+<body >
+
+<div class="bc"  style="width: 380px;height: 60px;margin: 0 auto;display: flex;align-items: center">
+  <div class="box" style="display: flex;align-items: center;justify-content: center;" >
+    <img id="sendtx_logo" src="./images/eth.png" style="width: 32px">
+    <span id="from_addr" >0x1111...1111</span>
+    <svg style="width: 32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+    </svg>
+    <span id="to_addr">0x1111...1111</span>
+    <img style="border-radius: 100%;width: 32px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiIHNoYXBlLXJlbmRlcmluZz0ib3B0aW1pemVTcGVlZCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJoc2woMTU4IDQzJSA0NiUpIiBkPSJNMCwwSDhWOEgweiIvPjxwYXRoIGZpbGw9ImhzbCgzMDcgNjclIDMyJSkiIGQ9Ik0wLDBoMXYxaC0xek03LDBoMXYxaC0xek0yLDBoMXYxaC0xek01LDBoMXYxaC0xek0zLDBoMXYxaC0xek00LDBoMXYxaC0xek0zLDFoMXYxaC0xek00LDFoMXYxaC0xek0wLDJoMXYxaC0xek03LDJoMXYxaC0xek0yLDJoMXYxaC0xek01LDJoMXYxaC0xek0wLDNoMXYxaC0xek03LDNoMXYxaC0xek0xLDNoMXYxaC0xek02LDNoMXYxaC0xek0zLDNoMXYxaC0xek00LDNoMXYxaC0xek0wLDRoMXYxaC0xek03LDRoMXYxaC0xek0zLDRoMXYxaC0xek00LDRoMXYxaC0xek0yLDZoMXYxaC0xek01LDZoMXYxaC0xek0xLDdoMXYxaC0xek02LDdoMXYxaC0xeiIvPjxwYXRoIGZpbGw9ImhzbCgyNzkgNjklIDM5JSkiIGQ9Ik0wLDFoMXYxaC0xek03LDFoMXYxaC0xek0yLDRoMXYxaC0xek01LDRoMXYxaC0xek0xLDZoMXYxaC0xek02LDZoMXYxaC0xek0yLDdoMXYxaC0xek01LDdoMXYxaC0xek0zLDdoMXYxaC0xek00LDdoMXYxaC0xeiIvPjwvc3ZnPg==">
+  </div>
+</div>
+<div class="bc"  style="width: 380px;font-size:small;color: limegreen;height: 15px;margin: 0 auto;display: flex;align-items: center;justify-content: center">
+  <span id="tx_type" style="padding-left: 5px;padding-right: 5px;text-align: center;border: 1px solid #4CAF50;border-radius: 5px" >&nbsp;Contract interaction&nbsp; </span>
+</div>
+<div class="bc"  style="width: 380px;height: 40px;margin: 0 auto;display: flex;align-items: center">
+  <div class="box" style="display: flex;margin-left: 40px" >
+    <img style="border-radius: 100%;width: 32px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiIHNoYXBlLXJlbmRlcmluZz0ib3B0aW1pemVTcGVlZCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJoc2woMTU4IDQzJSA0NiUpIiBkPSJNMCwwSDhWOEgweiIvPjxwYXRoIGZpbGw9ImhzbCgzMDcgNjclIDMyJSkiIGQ9Ik0wLDBoMXYxaC0xek03LDBoMXYxaC0xek0yLDBoMXYxaC0xek01LDBoMXYxaC0xek0zLDBoMXYxaC0xek00LDBoMXYxaC0xek0zLDFoMXYxaC0xek00LDFoMXYxaC0xek0wLDJoMXYxaC0xek03LDJoMXYxaC0xek0yLDJoMXYxaC0xek01LDJoMXYxaC0xek0wLDNoMXYxaC0xek03LDNoMXYxaC0xek0xLDNoMXYxaC0xek02LDNoMXYxaC0xek0zLDNoMXYxaC0xek00LDNoMXYxaC0xek0wLDRoMXYxaC0xek03LDRoMXYxaC0xek0zLDRoMXYxaC0xek00LDRoMXYxaC0xek0yLDZoMXYxaC0xek01LDZoMXYxaC0xek0xLDdoMXYxaC0xek02LDdoMXYxaC0xeiIvPjxwYXRoIGZpbGw9ImhzbCgyNzkgNjklIDM5JSkiIGQ9Ik0wLDFoMXYxaC0xek03LDFoMXYxaC0xek0yLDRoMXYxaC0xek01LDRoMXYxaC0xek0xLDZoMXYxaC0xek02LDZoMXYxaC0xek0yLDdoMXYxaC0xek01LDdoMXYxaC0xek0zLDdoMXYxaC0xek00LDdoMXYxaC0xeiIvPjwvc3ZnPg==">
+    <span style="margin-left: 5px;font-size: small">C</span>
+    <span id="Value_span" style="margin-left: 5px"></span>
+    <span id="chain1" style="margin-left: 5px">ETH</span>
+  </div>
+</div>
+<div class="bc"  style="width: 380px;height: 40px;margin: 0 auto;display: flex;align-items: center">
+  <div class="box" style="display: flex;margin-left: 40px" >
+    <span id="tx_url" style="padding-left: 5px;padding-right: 5px;text-align: center;border: 1px solid rgb(51,116,195);color:rgb(51,116,195);border-radius: 5px;font-size: small" >&nbsp;Chrome Extends&nbsp; </span>
+  </div>
+</div>
+<div class="bc"  style="width: 380px;min-height: 250px;margin: 0 auto;">
+  <div class="tab-header">
+    <button class="tablinks active" id="tab1">Details</button>
+    <button class="tablinks" id="tab2">Hexadecimal</button>
+  </div>
+  <div id="tab1" class="tab-content active" style="width: 360px;padding-left: 10px;padding-right: 10px" >
+    <div class="box" style="display: flex;height: 60px;width: 360px;" >
+      <span style="flex: 0.3;margin-left: 5px;color: #5f5f5f;font-size: x-small;text-align: left">Estimated Gas:</span>
+      <span id="Gas_span" style="flex:0.6;font-size: x-small;text-align: right"></span>
+      <span id="chain2" style="flex: 0.1;margin-left: 1px;color: #5f5f5f;font-size: x-small">ETH</span>
+    </div>
+    <div class="box" style="display: flex;border-bottom: 1px solid #a3a3a3;height: 30px;width: 360px;" >
+      <span style="flex: 0.1;margin-left: 5px;color: #5f5f5f;font-size: x-small;text-align: left">GasPrice</span>
+      <span id="GasPrice_span" style="flex:0.4;font-size: x-small;text-align: right"></span>
+      <span id="Gdrips" style="flex: 0.3;margin-left: 5px;color: #5f5f5f;font-size: x-small;text-align: left">Gdrips</span>
+      <span id="Add_GasPrice" style="flex: 0.4;margin-left: 5px;color: #008cff;font-size: x-small;text-align: left;cursor: pointer;">🚄x10 high-speed</span>
+    </div>
+    <div  class="box" style="display: flex;height: 80px;width: 360px;" >
+      <span style="flex: 0.3;margin-left: 5px;color: #5f5f5f;font-size: x-small;text-align: left">Total:</span>
+      <span id="Total_span" style="flex:0.6;font-size: x-small;text-align: right"></span>
+      <span id="chain3" style="flex: 0.1;margin-left: 1px;color: #5f5f5f;font-size: x-small">ETH</span>
+    </div>
+    <div class="box" style="display: flex;height: 10px;width: 360px;" >
+      <span style="flex: 0.3;margin-left: 5px;margin-top:-40px;color: #5f5f5f;font-size: x-small;text-align: left">Amount+Gas</span>
+      <span id="Total_span_all" style="flex:0.6;font-size: small;margin-top:-40px;text-align: right;font-weight: bold"></span>
+      <span id="chain4" style="flex: 0.1;margin-left: 1px;margin-top:-40px;color: #5f5f5f;font-size: x-small">ETH</span>
+    </div>
+  </div>
+
+  <div id="tab2" class="tab-content" style="min-height: 150px;width: 380px;word-wrap: break-word;" >
+    <div id="Txdata_span" style="width: 340px;margin: 10px auto;min-height: 150px;padding-right:10px;padding-left:10px;border-radius: 10px;color: #808080;font-size:smaller;word-wrap: break-word;border: 1.2px solid #797979;text-align: left;">
+0x00
+</div>
+  </div>
+</div>
+
+<div class="bc"  style="width: 380px;min-height: 10px;margin: 0 auto;">
+<div id="loadicon" class="loader loader--style2" title="1" >
+  <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+  <path fill="#FF6700" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+    <animateTransform attributeType="xml"
+                      attributeName="transform"
+                      type="rotate"
+                      from="0 25 25"
+                      to="360 25 25"
+                      dur="0.6s"
+                      repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+</div>
+
+
+<div class="bc"  style="width: 380px;height: 40px;margin: 0 auto">
+  <p class="bc" id="errorinfo" style="color: red;margin-left: 4%;margin-top: 0%;font-size: small;">.</p>
+</div>
+
+<div class="bc"  style="width: 380px;height: 60px;margin: 0 auto">
+
+  <div class="box" style="border-top: 1px solid #a3a3a3">
+    <button class="MainObtain" id="btn_Reject" >Reject</button>
+
+    <button class="MainObtain" id="btn_Confirm" >Confirm</button>
+  </div>
+</div>
+
+<script src="sendtx.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tokens Pool</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/Frame_12.css" />
+    <link href="sidepanel.css" rel="stylesheet" />
+  </head>
+  <body style="background-color: #ecf0f1">
+    <div>
+      <!-- // -->
+      <div id="div_information" style="visibility:hidden;width: 100%;padding: 0px 14px; position: fixed;z-index: 10;margin-top: 10px;background-color: #ecf0f1;">
+        <div class="oldsister">
+          <div style="cursor: pointer;">
+            <img
+              id="exit_div_information"
+              style="
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                right: 5px;
+                margin-top: -50px;
+                
+              "
+              src="images/x.png"
+            />
+          </div>
+          <div style="margin-right: 14px;">
+            <img
+            id="info_icon"
+              style="width: 48px;border-radius: 10px;"
+              src="/images/nevers-logo.png"
+            />
+          </div>
+          <div style="display: block">
+            <div
+            id="info_name_symbol"
+              style="
+                line-height: 15px;
+                font-size: 18.5px;
+                font-family: Arial Hebrew;
+                line-height: 14.5px;
+                font-weight: 700;
+                color: #10cc97;
+              "
+            >
+              Nomadland(NMAD)
+            </div>
+            <div
+              style="
+                display: flex;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                padding: 5px 5px;
+              "
+            >
+              <img
+              id="info_web"
+                style="
+                  margin-right: 5px;
+                  width: 16px;
+                  height: 16px;
+                  cursor: pointer;
+                "
+                src="images/iweb.png"
+              />
+              <img
+              id="info_twi"
+                style="
+                  margin-right: 5px;
+                  width: 16px;
+                  height: 16px;
+                  cursor: pointer;
+                "
+                src="images/it.png"
+              />
+              <img
+              id="info_dicord"
+                style="
+                  margin-right: 5px;
+                  width: 21px;
+                  height: 16px;
+                  cursor: pointer;
+                "
+                src="images/idicord.png"
+              />
+            </div>
+            <div  class="Y_font" style="display: flex">
+              <span>Total Supply:</span>
+              <span id="info_TotalSupply"> 1,000,000,000</span>
+            </div>
+            <div class="Y_font" style="display: flex">
+              <span>Mint Limit/per:</span>
+              <span id="info_MintLimit" >200</span>
+            </div>
+            <div  style="display: flex;" class="Y_font">
+              <span>Mint Price:</span>
+              <span id="info_MintPrice">0.02</span>
+              <span id="info_MintPrice_sb" style="margin-left: 3px;">ETH</span>
+            </div>
+            <div style="display: flex">
+              <span class="Y_font">Smart Contract:</span>
+              <span  id="info_Address" class="Y_font">0xd......hjsuj</span>
+              <img
+              id="info_contracttoscan"
+                style="width: 20px; padding-left: 5px; cursor: pointer"
+                src="/images/toscan.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="oldsister" style="display: block;min-height: 330px;">
+          <div
+            style="
+              margin-left: 5px;
+              margin-bottom: 20px;
+              line-height: 18.5px;
+              font-size: 18.5px;
+              font-family: Arial Hebrew;
+              font-weight: 700;
+              color: #10cc97;
+            "
+          >
+            Token Description
+          </div>
+          <div
+          id="info_description"
+            class="Y_font"
+            style="
+              word-wrap: normal;
+              width: 100%;
+              padding-left: 20px;
+              padding-right: 20px;
+            "
+          >
+            This is token descriptionThis is token descriptionThis is token
+            descriptionThis is token description。100% of Your ETH is
+            Contributed to the Liquidity Pool.100% of Your ETH is Contributed to
+            the Liquidity Pool.100% of Your ETH is Contributed to the Liquidity
+            Pool.100% of Your ETH is Contributed to the Liquidity Pool.100% of
+            Your ETH is Contributed to the Liquidity Pool. This is token
+            descriptionThis is token descriptionThis is token descriptionThis is
+            token description。100% of Your ETH is Contributed to the Liquidity
+            Pool.100% of Your ETH is Contributed to the Liquidity Pool.100% of
+            Your ETH is
+          </div>
+        </div>
+      </div>
+      <!-- // -->
+      <div style="display: block; background-color: #ecf0f1; min-height: 30px">
+        <img
+          class="image pos"
+          style="width: 150px; left: 30%"
+          src="../images/nl-long.svg"
+        />
+        <div style="height: 30px"></div>
+        <div style="display: flex">
+          <div
+            style="
+              flex: 1;
+              display: flex;
+              background-color: #ecf0f1;
+              min-height: 40px;
+            "
+          >
+            <div
+              id="btn_mint"
+              style="
+                position: relative;
+                margin-top: 40px;
+                margin-left: 20px;
+                cursor: pointer;
+              "
+            >
+              <span
+                id="btn_mint_font"
+                class="text"
+                style="
+                  font-size: 18px;
+                  z-index: 1;
+                  font-size: 18px;
+                  font-weight: bold;
+                "
+                >Mint</span
+              >
+              <div id="Mint_png" style="position: absolute">
+                <img
+                  class="image_3"
+                  src="../images/slecte-1.png"
+                  style="
+                    position: absolute;
+                    margin-left: 0px;
+                    margin-top: -25px;
+                  "
+                />
+                <div
+                  class="section_4"
+                  style="position: absolute; margin-top: -6px"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div style="width: 10px"></div>
+          <div
+            id="btn_trade"
+            style="
+              flex: 1;
+              display: flex;
+              background-color: #ecf0f1;
+              min-height: 40px;
+              cursor: pointer;
+            "
+          >
+            <div style="position: relative; margin-top: 40px">
+              <span
+                id="btn_trade_font"
+                class="text"
+                style="
+                  font-size: 18px;
+                  z-index: 1;
+                  font-size: 15px;
+                  font-weight: normal;
+                  color: #7a7d7c;
+                "
+                >Trade</span
+              >
+              <div
+                id="Trade_png"
+                style="position: absolute; visibility: hidden"
+              >
+                <img
+                  class="image_3"
+                  src="../images/slecte-1.png"
+                  style="
+                    position: absolute;
+                    margin-left: 0px;
+                    margin-top: -25px;
+                  "
+                />
+                <div
+                  class="section_4"
+                  style="position: absolute; margin-top: -6px"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              flex: 3;
+              background-color: #ecf0f1;
+              min-height: 40px;
+              text-align: right;
+              align-items: end;
+              margin-right: 20px;
+            "
+          >
+            <div style="position: relative; margin-top: 40px">
+              <span
+                id="info_btn"
+                class="font_3 text_4"
+                style="text-align: right; font-size: 10px"
+                >Minted By Gas</span
+              >
+            </div>
+          </div>
+        </div>
+        <div style="height: 58px"></div>
+        <div
+          id="mints_btn_items"
+          class="mint-flex-row mint-justify-between group_3 pos_9"
+          style="margin-top: 15px"
+        >
+          <div
+            id="Gas_Mint_btn"
+            style="width: 80px; margin-right: 5px; cursor: pointer"
+            class="mint-flex-col mint-justify-start mint-items-center button"
+          >
+            <span id="Gas_Mint_span" class="font text_5">Gas Mint</span>
+          </div>
+          <div
+            id="Liquid_Mint_btn"
+            style="width: 80px; margin-right: 5px; cursor: pointer"
+            class="mint-flex-col mint-justify-start mint-items-center button_2"
+          >
+            <span id="Liquid_Mint_span" class="font_4 text_6">Liquid Mint</span>
+          </div>
+          <div
+            id="Mint95"
+            style="width: 80px; margin-right: 5px; cursor: pointer"
+            class="mint-flex-col mint-justify-start mint-items-center button_2"
+          >
+            <span id="Mint95_span" class="font_4 text_6">95% Mint</span>
+          </div>
+          <div
+            id="PFPs_btn"
+            style="width: 80px; margin-right: 5px; cursor: pointer"
+            class="mint-flex-col mint-justify-start mint-items-center button_2"
+          >
+            <span id="PFPs_span" class="font_4 text_6">PFPs</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab1" class="mint-flex-col page" style="margin-right: 10px">
+        <div id="gas_mint_tab">
+          <ul id="gas_MintPools_ul" class="mint-flex-col list mt-15"></ul>
+        </div>
+        <div id="liquid_mint_tab" style="display: none">
+          <ul id="liquid_MintPools_ul" class="mint-flex-col list mt-15"></ul>
+        </div>
+        <div id="mint_95_tab" style="display: none">
+          <ul id="mint_95_ul" class="mint-flex-col list mt-15">
+            <li
+              style="
+                text-align: center;
+                margin-right: 10px;
+                font-size: small;
+                color: #777979;
+              "
+            >
+              Coming soon...
+            </li>
+          </ul>
+        </div>
+        <div id="pfps_tab" style="display: none">
+          <ul id="pfps_ul" class="mint-flex-col list mt-15">
+            <li
+              style="
+                text-align: center;
+                margin-right: 10px;
+                font-size: small;
+                color: #777979;
+              "
+            >
+              Coming soon...
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        id="tab2"
+        style="display: none; margin-top: -40px"
+        class="mint-flex-col page"
+      >
+      <div style="position: relative; margin-left: 20px;">
+        <span
+          style="text-align: right; font-size: 10px;width: 100%;color:#aaabaa ;"
+          >If you got the token through "Gas Mint" please visit blast dex to trade. If you got the token through "Liquid Mint" you can trade directly below.</span
+        >
+      </div>
+        <div>
+          <ul id="Swap_ul" class="mint-flex-col list mt-15"></ul>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center">
+        <div id="loadicon" class="loader loader--style2" title="1" style="">
+          <svg
+            version="1.1"
+            id="loader-1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="40px"
+            height="40px"
+            viewBox="0 0 50 50"
+            style="enable-background: new 0 0 50 50"
+            xml:space="preserve"
+          >
+            <path
+              fill="#FF6700"
+              d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z"
+            >
+              <animateTransform
+                attributeType="xml"
+                attributeName="transform"
+                type="rotate"
+                from="0 25 25"
+                to="360 25 25"
+                dur="0.6s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

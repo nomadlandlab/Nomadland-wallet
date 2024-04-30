@@ -1,0 +1,234 @@
+
+html {
+    height:100%;
+}
+body {
+    margin:0;
+    background-position:center;
+    background-size:100%;
+}
+
+.box{
+    width:100%;height:100%;
+    display:table;
+    text-align:center;
+    margin-top: auto;
+    align-items: center;
+}
+.box span{
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.bc{
+    background-color: #08684d;
+}
+.bc div{
+    width: 381px;
+}
+.MainObtain:hover {
+    background-color: #1ec193; 
+}
+.MainObtain{
+    background-color: #0aa377;
+    color: white;width: 150px;height:40px;font-size: 18px;border-radius: 10px;border: none
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+.container{
+    width:380px;
+    height:auto;
+    margin:auto;
+}
+
+.row{
+    width: 380px;
+    height:auto;
+    display: flex;
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+}
+.elem{
+    margin-top:1px;
+    margin-right:1px;
+    flex:1;
+    background-color:#FFFFFF;
+    height:50px;
+}
+
+.row1{
+    width: 380px;
+    height:auto;
+    display: flex;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+}
+.elem1{
+    margin-top:1px;
+    flex:1;
+    background-color: #FFFFFF;
+    height:45px;
+}
+.elem-nor{
+    margin-top:1px;
+    margin-right:1px;
+    flex:0.3;
+    background-color: #FFFFFF;
+    height:45px;
+}
+.elem1-1{
+    margin-top:1px;
+    margin-right:1px;
+    flex:2;
+    background-color: #FFFFFF;
+    height:45px;
+}
+.tall-elem{
+    height:90px;
+}
+.child{
+    margin:1px auto;
+    background-color:#FFFFFF ;
+    width:calc(100% - 10px);
+    height:20px;
+}
+.child-zc{
+    margin:3px auto;
+    background-color: #f0f1f1;
+    width:calc(100% - 10px);
+    height:50px;
+    border-radius: 10px
+}
+.elem-txt:hover{
+    background-color: #525244;
+}
+.elem-txt{
+    font-family: TwitterChirp;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4375em;
+    color: var(--mui-palette-text-primary);
+    box-sizing: border-box;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    height: 46px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #262612;
+    width: 95%;
+    height: 75%;
+    margin-top: 10%;
+    color: white;
+}
+
+
+.row-transfer-input{
+    width: 380px;
+    height:auto;
+    display: flex;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+}
+.listcoin{
+    list-style-type: none;
+    align-items: center;display: inline-flex;
+    margin-right: 1px;
+    margin-left: -30px;
+    width: 130px;
+    cursor: pointer;
+    text-align: center;
+
+}
+.listcoin:hover{
+    background-color: #e8e8e8;
+
+}
+.tab-header {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.tab-header button {
+    background-color: inherit;
+    color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.tab-header button.active {
+    border-bottom: 2px solid #4caf50;
+}
+.tab-content {
+    display: none;
+    padding: 5px 0px;
+}
+.tab-content.active {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0%;
+    text-align: left;
+}
+.tab-content ul {
+    padding-inline-start: 0px;
+}
+.tab-header button {
+    width: 50%;
+    font-size: large;
+}
+
+.loader {
+    visibility: visible;
+    text-align: center;
+    display: inline-block;
+    vertical-align:top;
+    margin-top: 300px;
+}
+.loader svg path,
+svg rect {
+    fill: #FF6700;
+}
+
+
+.grid-container {  
+    display: grid;  
+    grid-template-columns: 1fr 1fr;  
+    gap: 10px;  
+}  
+
+.grid-item {  
+    background-color: #ffffff;  
+    border: 1px solid #ddd;  
+    padding: 0px;  
+    font-size: 12px;  
+    font-weight: bold;
+    text-align: center;
+    height: 185px;
+}  
+
+.dobsimg{
+    width: 160px;
+}
+.dobs_op{
+    display: flex;justify-content: space-between;
+}
+.dobs_name{
+    flex: 4;
+}
+.dobs_btn{
+    flex: 1;cursor: pointer;height: 19px;width:45px;
+    background-image:linear-gradient(6.5deg, #00ba85 6.7%, #10cc97 61%, #4befc1 98.2%);
+    color: #FFFFFF;
+}
