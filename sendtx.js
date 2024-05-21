@@ -25,10 +25,3 @@ document.getElementById('tab2').addEventListener("click", function () {
     showTab(2);
 });
 
-document.getElementById('btn_Reject').addEventListener("click", function () {
-    chrome.windows.getCurrent((currentWindow) => {
-        chrome.windows.remove(currentWindow.id,()=>{
-          console.log("关闭窗口")
-        });
-      });
-});

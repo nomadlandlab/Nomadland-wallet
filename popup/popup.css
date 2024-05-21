@@ -232,3 +232,8 @@ svg rect {
     background-image:linear-gradient(6.5deg, #00ba85 6.7%, #10cc97 61%, #4befc1 98.2%);
     color: #FFFFFF;
 }
+.URL_TXT{
+    color: rgb(210, 209, 209);
+    margin-top: 40px;
+    cursor: pointer;
+}

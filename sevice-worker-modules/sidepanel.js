@@ -16,6 +16,9 @@ chrome.runtime.onMessage.addListener(
       }
     }
   );
+
+
+  
   function openpage(pageurl) {
     chrome.windows.getCurrent((currentWindow) => {
         chrome.windows.update(currentWindow.id, { focused: true });

@@ -38,7 +38,11 @@ body {
     display: none;
 }
 
-
+.URL_TXT{
+    color: rgb(210, 209, 209);
+    margin-top: 40px;
+    cursor: pointer;
+}
 
 
 .my_setting{

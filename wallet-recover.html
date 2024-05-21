@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallet-Recover</title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body >
+<div class="bc"  style="width: 380px;height: 140px;margin: 0 auto">
+  <div class="box" >
+    <img src="logo-vertical.svg" >
+  </div>
+
+</div>
+<div class="bc"  style="width: 380px;height: 130px;margin: 0 auto">
+  <div class="box">
+    <h2 style="color: rgb(255, 234, 0)">Recover Normal Wallet</h2>
+    <p style="text-align: left;margin-left: 10px;color: red;font-weight:400;">the account through private key reset will overwrite and replace the original generated account. Please make a backup of the original account.通过私钥重置恢复账户，会覆盖替换原来生成的账户，请做好原账户的备份</p>
+  </div>
+</div>
+<div class="bc"  style="width: 380px;height: 80px;margin: 0 auto">
+  <p class="bc"  style="color: white;font-size: 16px;line-height: 18px;margin-left: 14px;margin-top: 0px">Enter your PrivateKey</p>
+  <div class="box" >
+    <input id="PrivateKey_TXT" type="password" placeholder="0x1b2e34..." style="width: 350px;height: 38px;font-size: 18px;border-radius: 10px;border: none">
+  </div>
+</div>
+<div class="bc"  style="width: 380px;height: 80px;margin: 0 auto">
+  <p class="bc"  style="color: white;font-size: 16px;line-height: 18px;margin-left: 14px;margin-top: 0px">Enter your password</p>
+  <div class="box" >
+    <input id="pass1" type="password" style="width: 350px;height: 38px;font-size: 18px;border-radius: 10px;border: none">
+  </div>
+</div>
+<div class="bc"  style="width: 380px;height: 80px;margin: 0 auto">
+  <p class="bc" style="color: white;font-size: 16px;line-height: 18px;margin-left: 14px;margin-top: 0px">Confirm your password</p>
+  <div class="box" >
+    <input id="pass2" type="password" style="width: 350px;height: 38px;font-size: 18px;border-radius: 10px;border: none">
+  </div>
+
+</div>
+<div class="bc"  style="width: 380px;height: 30px;margin: 0 auto">
+  <p class="bc" id="errorinfo" style="color: red;margin-left: 4%;margin-top: 0%;font-size: small;">.</p>
+</div>
+<div class="bc"  style="width: 380px;height: 60px;margin: 0 auto">
+  <div class="box">
+    <button class="MainObtain" id="btn_Done_Recover">Done</button>
+  </div>
+</div>
+</body>
+<script src="./wallet.js"></script>
+</html>

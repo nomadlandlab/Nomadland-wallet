@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add-token</title>
+    <title>Authorize Wallet</title>
     <link href="main.css" rel="stylesheet">
 </head>
 <body >
@@ -18,25 +18,25 @@
 </div>
 <div style="background-color: #08684d;width: 380px;height: 80px;margin: 0 auto">
     <div class="box">
-        <h2 style="color: white">Add Token</h2>
+        <h2 id="url" style="color: white">Authorize URL</h2>
     </div>
 </div>
 <div style="background-color: #08684d;width: 380px;height: 200px;margin: 0 auto">
-    <p style=" background-color: #08684d;color: white;font-size: 16px;line-height: 18px;margin-left: 14px;margin-top: 0px">
-        Enter your XUDT Type_Hash</p>
-    <div class="box" >
-        <input id="pass1" placeholder="0xb5fdb4e8ad52f5e3ed4a294c01ca99f7811b06baef2e7fce5b7d4ebbf006717d" type="text" style="line-height: 10;width: 350px;height: 38px;font-size: 18px;border-radius: 10px;border: none">
+    <div id="unlock_div" style="visibility: hidden;">
+        <p  style=" background-color: #08684d;color: white;font-size: 16px;line-height: 18px;margin-left: 14px;margin-top: 0px">
+            UnLock Your Wallet</p>
+        <div class="box" >
+            <input id="pass1" type="password" placeholder="Password" style="line-height: 10;width: 350px;height: 38px;font-size: 18px;border-radius: 10px;border: none">
+        </div>
     </div>
     <p id="errorinfo" style="letter-spacing:0.6px;word-break: break-all; background-color: #08684d;color: rgb(255, 0, 0);font-size: 14px;line-height: 18px;
-    margin-left: 18px;margin-right: 14px;margin-top: -138px;width: 95%;"></p>
-     <p id="view_typehash_btn" class="URL_TXT" style="text-align: center;" >What is typehash? View the typehash of RGB++assets on a browser</p>
+    margin-left: 18px;margin-right: 14px;margin-top: 0px;width: 95%;"></p>
 </div>
 <div style="background-color: #08684d;width: 380px;height: 100px;margin: 0 auto">
     <div class="box">
-        <button class="MainObtain" id="add_btn">Add</button>
-        <button class="MainObtain" id="clear_btn" style="margin-left: 5px;">ClearAll</button>
+        <button class="MainObtain" id="add_btn">Authorize</button>
     </div>
 </div>
 </body>
-<script src="addtoken.js"></script>
+<script src="./aut.js"></script>
 </html>

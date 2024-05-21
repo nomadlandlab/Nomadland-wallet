@@ -63,7 +63,9 @@ body * {
 .mint-items-center {
   align-items: center;
 }
-
+.mint-items-center2 {
+  align-items: left;
+}
 .mint-items-baseline {
   align-items: baseline;
 }

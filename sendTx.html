@@ -23,7 +23,7 @@
 </div>
 <div class="bc"  style="width: 380px;height: 40px;margin: 0 auto;display: flex;align-items: center">
   <div class="box" style="display: flex;margin-left: 40px" >
-    <img style="border-radius: 100%;width: 32px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiIHNoYXBlLXJlbmRlcmluZz0ib3B0aW1pemVTcGVlZCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJoc2woMTU4IDQzJSA0NiUpIiBkPSJNMCwwSDhWOEgweiIvPjxwYXRoIGZpbGw9ImhzbCgzMDcgNjclIDMyJSkiIGQ9Ik0wLDBoMXYxaC0xek03LDBoMXYxaC0xek0yLDBoMXYxaC0xek01LDBoMXYxaC0xek0zLDBoMXYxaC0xek00LDBoMXYxaC0xek0zLDFoMXYxaC0xek00LDFoMXYxaC0xek0wLDJoMXYxaC0xek03LDJoMXYxaC0xek0yLDJoMXYxaC0xek01LDJoMXYxaC0xek0wLDNoMXYxaC0xek03LDNoMXYxaC0xek0xLDNoMXYxaC0xek02LDNoMXYxaC0xek0zLDNoMXYxaC0xek00LDNoMXYxaC0xek0wLDRoMXYxaC0xek03LDRoMXYxaC0xek0zLDRoMXYxaC0xek00LDRoMXYxaC0xek0yLDZoMXYxaC0xek01LDZoMXYxaC0xek0xLDdoMXYxaC0xek02LDdoMXYxaC0xeiIvPjxwYXRoIGZpbGw9ImhzbCgyNzkgNjklIDM5JSkiIGQ9Ik0wLDFoMXYxaC0xek03LDFoMXYxaC0xek0yLDRoMXYxaC0xek01LDRoMXYxaC0xek0xLDZoMXYxaC0xek02LDZoMXYxaC0xek0yLDdoMXYxaC0xek01LDdoMXYxaC0xek0zLDdoMXYxaC0xek00LDdoMXYxaC0xeiIvPjwvc3ZnPg==">
+    <img id="dobs_img" style="border-radius: 100%;width: 32px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiIHNoYXBlLXJlbmRlcmluZz0ib3B0aW1pemVTcGVlZCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJoc2woMTU4IDQzJSA0NiUpIiBkPSJNMCwwSDhWOEgweiIvPjxwYXRoIGZpbGw9ImhzbCgzMDcgNjclIDMyJSkiIGQ9Ik0wLDBoMXYxaC0xek03LDBoMXYxaC0xek0yLDBoMXYxaC0xek01LDBoMXYxaC0xek0zLDBoMXYxaC0xek00LDBoMXYxaC0xek0zLDFoMXYxaC0xek00LDFoMXYxaC0xek0wLDJoMXYxaC0xek03LDJoMXYxaC0xek0yLDJoMXYxaC0xek01LDJoMXYxaC0xek0wLDNoMXYxaC0xek03LDNoMXYxaC0xek0xLDNoMXYxaC0xek02LDNoMXYxaC0xek0zLDNoMXYxaC0xek00LDNoMXYxaC0xek0wLDRoMXYxaC0xek03LDRoMXYxaC0xek0zLDRoMXYxaC0xek00LDRoMXYxaC0xek0yLDZoMXYxaC0xek01LDZoMXYxaC0xek0xLDdoMXYxaC0xek02LDdoMXYxaC0xeiIvPjxwYXRoIGZpbGw9ImhzbCgyNzkgNjklIDM5JSkiIGQ9Ik0wLDFoMXYxaC0xek03LDFoMXYxaC0xek0yLDRoMXYxaC0xek01LDRoMXYxaC0xek0xLDZoMXYxaC0xek02LDZoMXYxaC0xek0yLDdoMXYxaC0xek01LDdoMXYxaC0xek0zLDdoMXYxaC0xek00LDdoMXYxaC0xeiIvPjwvc3ZnPg==">
     <span style="margin-left: 5px;font-size: small">C</span>
     <span id="Value_span" style="margin-left: 5px"></span>
     <span id="chain1" style="margin-left: 5px">ETH</span>
@@ -36,8 +36,8 @@
 </div>
 <div class="bc"  style="width: 380px;min-height: 250px;margin: 0 auto;">
   <div class="tab-header">
-    <button class="tablinks active" id="tab1">Details</button>
-    <button class="tablinks" id="tab2">Hexadecimal</button>
+    <button id="sendtx_tab1" class="tablinks active" id="tab1">Details</button>
+    <button id="sendtx_tab2" class="tablinks" id="tab2">Hexadecimal</button>
   </div>
   <div id="tab1" class="tab-content active" style="width: 360px;padding-left: 10px;padding-right: 10px" >
     <div class="box" style="display: flex;height: 60px;width: 360px;" >
@@ -64,8 +64,8 @@
   </div>
 
   <div id="tab2" class="tab-content" style="min-height: 150px;width: 380px;word-wrap: break-word;" >
-    <div id="Txdata_span" style="width: 340px;margin: 10px auto;min-height: 150px;padding-right:10px;padding-left:10px;border-radius: 10px;color: #808080;font-size:smaller;word-wrap: break-word;border: 1.2px solid #797979;text-align: left;">
-0x00
+    <div id="Txdata_span" style="overflow-y: auto;width: 340px;height: 150px;margin-left: 10px;margin: 10px auto;padding-right:10px;padding-left:10px;border-radius: 10px;color: #808080;font-size:smaller;word-wrap: break-word;border: 1.2px solid #797979;text-align: left;">
+      
 </div>
   </div>
 </div>
